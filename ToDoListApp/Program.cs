@@ -108,6 +108,7 @@ class Program
                     if (tasks.Count > 0)
                     {
                         tasks.Clear();
+                        File.WriteAllText(filePath, JsonSerializer.Serialize(tasks));
                         Console.WriteLine("Task list cleared.");
                     }
                     else
